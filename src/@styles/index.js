@@ -5,11 +5,6 @@ export const commonStyle = css`
   *::before,
   *::after {
     box-sizing: border-box;
-    font-family: onLeaf;
-  }
-
-  html {
-    font-family: onLeaf;
   }
 
   body {
