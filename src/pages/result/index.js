@@ -20,18 +20,18 @@ const Result = () => {
       content: {
         title: type.name,
         description: type.desc,
-        imageUrl: "http://localhost:3000/likelion.png",
+        imageUrl: "https://client-ucqx.vercel.app/likelion.png",
         link: {
-          mobileWebUrl: "https://developers.kakao.com",
-          webUrl: "https://developers.kakao.com",
+          mobileWebUrl: "https://client-ucqx.vercel.app",
+          webUrl: "https://client-ucqx.vercel.app",
         },
       },
       buttons: [
         {
           title: "당신의 서강 유형은?",
           link: {
-            mobileWebUrl: "https://developers.kakao.com",
-            webUrl: "https://developers.kakao.com",
+            mobileWebUrl: "https://client-ucqx.vercel.app",
+            webUrl: "https://client-ucqx.vercel.app",
           },
         },
       ],
