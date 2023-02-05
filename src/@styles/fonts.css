@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "onLeaf";
+  src: url("/onLeaf.ttf");
+  font-style: normal;
+  font-weight: normal;
+  font-display: fallback;
+}
