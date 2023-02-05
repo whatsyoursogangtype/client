@@ -14,12 +14,34 @@ const Result = () => {
     router.push("/");
   };
 
-  const share = () => {};
+  const share = () => {
+    Kakao.Share.sendDefault({
+      objectType: "feed",
+      content: {
+        title: type.name,
+        description: type.desc,
+        imageUrl: "http://localhost:3000/likelion.png",
+        link: {
+          mobileWebUrl: "https://developers.kakao.com",
+          webUrl: "https://developers.kakao.com",
+        },
+      },
+      buttons: [
+        {
+          title: "당신의 서강 유형은?",
+          link: {
+            mobileWebUrl: "https://developers.kakao.com",
+            webUrl: "https://developers.kakao.com",
+          },
+        },
+      ],
+    });
+  };
 
   const likelion = () => {
     router.push("/likelion");
   };
-
+  const key = process.env.NEXT_PUBLIC_KAKAO_API_KEY;
   useEffect(() => {
     const result = localStorage.getItem("sgType");
 
@@ -28,8 +50,10 @@ const Result = () => {
     } else {
       router.push("/");
     }
+    if (!Kakao.isInitialized()) {
+      window.Kakao.init(key);
+    }
   }, []);
-  console.log(type);
 
   return (
     <Flex>
@@ -39,7 +63,7 @@ const Result = () => {
           {" "}
           <Text>{type.name}</Text>
           <Button text="다시하기" onClick={retry} />
-          <Button text="결과 공유하기" />
+          <Button text="결과 공유하기" onClick={share} />
           <Button text="테스트가 재밌으셨나요?" onClick={likelion} />
         </>
       ) : (

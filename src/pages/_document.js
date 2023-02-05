@@ -11,6 +11,10 @@ export default function Document() {
           crossOrigin="anonymous"
           type="font/ttf"
         />
+        <script
+          defer
+          src="https://developers.kakao.com/sdk/js/kakao.min.js"
+        ></script>
       </Head>
       <body>
         <Main />
