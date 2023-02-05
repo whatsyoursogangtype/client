@@ -4,6 +4,7 @@ import { Flex } from "~/@components/atoms/Flex";
 import { Text } from "~/@components/atoms/Text";
 import { useRouter } from "next/router";
 import { Button } from "~/@components/atoms/Button";
+import Script from "next/script";
 
 const Result = () => {
   const router = useRouter();
@@ -57,6 +58,7 @@ const Result = () => {
 
   return (
     <Flex>
+      <Script src="https://developers.kakao.com/sdk/js/kakao.js" />
       <Text>당신의 서강 유형은!</Text>
       {type ? (
         <>
