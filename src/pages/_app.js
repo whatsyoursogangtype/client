@@ -1,4 +1,4 @@
-import GlobalStyle from "~/@styles/globalStyle";
+import GlobalStyle from "~/@styles/GlobalStyle";
 import "~/@styles/fonts.css";
 import AppLayout from "~/@components/templates/AppLayout";
 
