@@ -50,7 +50,7 @@ const Result = () => {
     } else {
       router.push("/");
     }
-    if (!Kakao.isInitialized()) {
+    if (!window.Kakao.isInitialized()) {
       window.Kakao.init(key);
     }
   }, []);
