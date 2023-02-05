@@ -1,4 +1,4 @@
-const data = [
+export const data = [
   {
     id: 1,
     question: "새내기가 된 당신. 미리 시간표를 짜보려고 한다. 어떻게 짜볼까?",
@@ -150,4 +150,45 @@ const data = [
   },
 ];
 
-export default data;
+export const types = {
+  SJL: {
+    id: "coffebreak",
+    name: "커피브레이크",
+    desc: "",
+  },
+  SJM: {
+    id: "loyola",
+    name: "로욜라",
+    desc: "",
+  },
+  SIL: {
+    id: "xlab",
+    name: "X관랩실",
+    desc: "",
+  },
+  SIM: {
+    id: "job",
+    name: "취업지원팀",
+    desc: "",
+  },
+  RJL: {
+    id: "alba",
+    name: "알바트로스탑",
+    desc: "",
+  },
+  RJM: {
+    id: "forest",
+    name: "경의선숲길",
+    desc: "",
+  },
+  RIL: {
+    id: "sinchon",
+    name: "빨간잠망경",
+    desc: "",
+  },
+  RIM: {
+    id: "soju",
+    name: "서강포차",
+    desc: "",
+  },
+};

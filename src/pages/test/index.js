@@ -1,8 +1,9 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import { Button } from "~/@components/atoms/Button";
 import { Flex } from "~/@components/atoms/Flex";
 import { Text } from "~/@components/atoms/Text";
-import data from "~/@utils/data.js";
+import { data } from "~/@utils/data.js";
 
 const Test = () => {
   const [curIdx, setCurIdx] = useState(0);
@@ -20,8 +21,31 @@ const Test = () => {
     const typeValue = e.target.id;
     if (curIdx < data.length) {
       setCurType({ ...curType, [typeValue]: curType[typeValue] + 1 });
-    } else {
     }
+  };
+
+  const showResult = () => {
+    let type = "";
+
+    if (curType.study >= 2) {
+      type += "S";
+    } else {
+      type += "R";
+    }
+
+    if (curType.jinro >= 2) {
+      type += "J";
+    } else {
+      type += "I";
+    }
+
+    if (curType.leader >= 2) {
+      type += "L";
+    } else {
+      type += "M";
+    }
+
+    localStorage.setItem("sgType", type);
   };
 
   console.log(curType);
@@ -29,7 +53,9 @@ const Test = () => {
   return (
     <Flex>
       {curIdx >= data.length ? (
-        <Button text={"결과보기"} />
+        <Link href={"/result"}>
+          <Button onClick={showResult} text={"결과보기"} />
+        </Link>
       ) : (
         <>
           <Text>{data[curIdx].question}</Text>
