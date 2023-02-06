@@ -1,9 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { COLOR_MAIN_TEXT } from "~/@utils/color";
 
 export function Text({
   size = 1,
   weight = "normal",
-  color = "black",
+  color = COLOR_MAIN_TEXT,
   children,
   spacing = -0.6,
   font = "onLeaf",
@@ -11,6 +12,8 @@ export function Text({
   underline = false,
   lineHeight = "120%",
   id = "none",
+  bigText = false,
+  typeText = false,
 }) {
   return (
     <StyledText
@@ -23,6 +26,8 @@ export function Text({
       underline={underline}
       lineHeight={lineHeight}
       id={id}
+      bigText={bigText}
+      typeText={typeText}
     >
       {children}
     </StyledText>
@@ -37,4 +42,26 @@ const StyledText = styled.span`
   line-height: ${({ lineHeight }) => lineHeight};
   font-family: ${({ font }) => font};
   cursor: ${({ cursor }) => cursor};
+
+  ${({ bigText, typeText }) => {
+    if (bigText) {
+      return css`
+        font-size: 1.5rem;
+        width: 70%;
+        text-align: center;
+        margin: 20px 0;
+        font-weight: bold;
+      `;
+    }
+
+    if (typeText) {
+      return css`
+        font-size: 2rem;
+        width: 70%;
+        text-align: center;
+        margin: 0 0 10px;
+        font-weight: bold;
+      `;
+    }
+  }}
 `;

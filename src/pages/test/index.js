@@ -2,8 +2,12 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Button } from "~/@components/atoms/Button";
 import { Flex } from "~/@components/atoms/Flex";
+import { StateBar } from "~/@components/organisms/StateBar";
 import { Text } from "~/@components/atoms/Text";
 import { data } from "~/@utils/data.js";
+import { useRouter } from "next/router";
+import { CharacterImg } from "~/@components/atoms/CharacterImg";
+import { COLOR_MAIN_RED, COLOR_WHITE_TEXT } from "~/@utils/color";
 
 const Test = () => {
   const [curIdx, setCurIdx] = useState(0);
@@ -15,6 +19,8 @@ const Test = () => {
     leader: 0,
     member: 0,
   });
+  const [stateWidth, setStateWidth] = useState(`5%`);
+  const router = useRouter();
 
   const onClick = (e) => {
     setCurIdx(curIdx + 1);
@@ -22,6 +28,8 @@ const Test = () => {
     if (curIdx < data.length) {
       setCurType({ ...curType, [typeValue]: curType[typeValue] + 1 });
     }
+    const width = ((curIdx + 1) / data.length) * 100;
+    setStateWidth(`${width}%`);
   };
 
   const showResult = () => {
@@ -46,6 +54,8 @@ const Test = () => {
     }
 
     localStorage.setItem("sgType", type);
+
+    router.push("/result");
   };
 
   console.log(curType);
@@ -53,17 +63,31 @@ const Test = () => {
   return (
     <Flex>
       {curIdx >= data.length ? (
-        <Link href={"/result"}>
-          <Button onClick={showResult} text={"결과보기"} />
-        </Link>
+        // <Link href={"/result"} style={{ width: "100%" }}>
+        //   <Button onClick={showResult} text={"결과보기"} />
+        // </Link>
+        <>
+          <CharacterImg src="likelion.png" width="50%" margin="100px 0 50px" />
+          <Button
+            onClick={showResult}
+            text={"결과보기"}
+            bgColor={COLOR_MAIN_RED}
+            color={COLOR_WHITE_TEXT}
+          />
+        </>
       ) : (
         <>
-          <Text>{data[curIdx].question}</Text>
+          {/* 질문 */}
+          <Text bigText={true}>Q. {data[curIdx].question}</Text>
+          {/* 상태 바 */}
+          <StateBar stateWidth={stateWidth} />
+          {/* 답변 - 1 */}
           <Button
             text={data[curIdx].answers[0].answer}
             id={data[curIdx].answers[0].label}
             onClick={onClick}
           />
+          {/* 답변 - 2 */}
           <Button
             text={data[curIdx].answers[1].answer}
             id={data[curIdx].answers[1].label}

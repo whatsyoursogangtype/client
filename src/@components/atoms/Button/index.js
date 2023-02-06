@@ -1,18 +1,25 @@
 import styled from "styled-components";
+import {
+  COLOR_MAIN_RED,
+  COLOR_MAIN_TEXT,
+  COLOR_MAIN_YELLOW,
+  COLOR_WHITE_TEXT,
+} from "~/@utils/color";
 import { Text } from "../Text";
 
 export const Button = ({
   text = "hi",
-  padding = "10px",
-  radius = "20px",
-  bgColor = "white",
+  padding = "3px 10px",
+  radius = "10px",
+  bgColor = COLOR_MAIN_YELLOW,
   font = "onLeaf",
   size = 1,
-  border = "none",
+  border = `2px solid ${COLOR_MAIN_RED}`,
   cursor = "pointer",
-  color = "black",
+  color = COLOR_MAIN_TEXT,
   spacing = -0.6,
   id = "none",
+  children,
   onClick = () => {
     return;
   },
@@ -38,6 +45,8 @@ export const Button = ({
       >
         {text}
       </Text>
+
+      {children}
     </RoundedItemContainer>
   );
 };
@@ -48,4 +57,7 @@ const RoundedItemContainer = styled.div`
   border-radius: ${({ radius }) => radius};
   background-color: ${({ bgColor }) => bgColor};
   border: ${({ border }) => border};
+  width: 70%;
+  margin-bottom: 10px;
+  position: relative;
 `;
