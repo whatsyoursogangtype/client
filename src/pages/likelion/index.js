@@ -9,7 +9,7 @@ import { COLOR_MAIN_RED, COLOR_WHITE_TEXT } from "~/@utils/color";
 const Likelion = () => {
   return (
     <Flex>
-      <Text bigText={true}>당신은...</Text>
+      <Text bigText={true}>당신은....</Text>
       <Text typeText={true}>멋쟁이사자처럼형!</Text>
       <WhiteBox>
         <CharacterImg src="likelion.png" width="80%" />
