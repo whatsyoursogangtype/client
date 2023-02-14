@@ -37,7 +37,10 @@ export default function ChooseMajor() {
 
       <StateBar stateWidth={"2%"} />
 
-      <Button text={major ? major : "학과 선택하기"}>
+      <Button
+        text={major ? major : "학과 선택하기"}
+        onClick={() => setToggle(!toggle)}
+      >
         <ArrowDiv onClick={() => setToggle(!toggle)}>
           <ArrowImg src={toggle ? "up.png" : "down.png"} />
         </ArrowDiv>
