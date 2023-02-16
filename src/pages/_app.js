@@ -9,13 +9,7 @@ export default function App({ Component, pageProps }) {
   return (
     <AppLayout>
       <Head>
-        <link
-          rel="preload"
-          href="/onLeaf.ttf"
-          as="font"
-          crossOrigin="anonymous"
-          type="font/ttf"
-        />
+        <link rel="preload" href="/onLeaf.ttf" as="font" type="font/woff" />
       </Head>
       <Script src="https://developers.kakao.com/sdk/js/kakao.js" />
       <GlobalStyle />
