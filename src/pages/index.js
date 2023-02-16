@@ -20,7 +20,7 @@ export default function Home() {
         <title>당신의 서강 유형은?</title>
         <meta property="og:title" content="당신의 서강 유형은?" key="title" />
         <meta property="og:url" content="https://sogangtype.com" />
-        <meta property="og:image" content="https://sogangtype.com/likelion-logo.png" />
+        <meta property="og:image" content="https://sogangtype.com/meta-img.png" />
         <meta property="og:description" content="What's your sogang type?" />
         <meta property="og:site_name" content="whatsyoursogangtype" />
       </Head>
