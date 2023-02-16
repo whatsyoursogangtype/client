@@ -6,7 +6,9 @@ const AppLayout = ({ children }) => {
     <AppLayoutContainer>
       {children}
 
-      <BackgroundImage src="bg-img.png" />
+      <BackgroundImageDiv>
+        <BackgroundImage src="bg-img.png" />
+      </BackgroundImageDiv>
     </AppLayoutContainer>
   );
 };
@@ -20,13 +22,20 @@ const AppLayoutContainer = styled.div`
   position: relative;
 `;
 
-const BackgroundImage = styled.img`
-  object-fit: cover;
+const BackgroundImageDiv = styled.div`
   width: 100%;
+  height: 100%;
+  background-color: white;
   position: absolute;
   z-index: -1;
   top: 0;
   left: 0;
+  overflow: hidden;
+`;
+
+const BackgroundImage = styled.img`
+  object-fit: cover;
+  width: 100%;
 `;
 
 export default AppLayout;
