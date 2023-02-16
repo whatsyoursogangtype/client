@@ -21,14 +21,12 @@ export const data = [
     answers: [
       {
         id: "2-1",
-        answer:
-          "이미 통학 루트 완벽 파악! 빠른 환승 위치, 버스, 전철 시간표를 완벽히 파악하고 있다. 넉넉하게 도착",
+        answer: "이미 통학 루트 완벽 파악! 빠른 환승 위치, 버스, 전철 시간표를 완벽히 파악하고 있다. 넉넉하게 도착",
         label: "jinro",
       },
       {
         id: "2-2",
-        answer:
-          "가는 방법 정도만 알아 놓고 일단 집에서 나간다. 강의 시작 1분 전 세이프",
+        answer: "가는 방법 정도만 알아 놓고 일단 집에서 나간다. 강의 시작 1분 전 세이프",
         label: "ildan",
       },
     ],
@@ -83,13 +81,11 @@ export const data = [
   },
   {
     id: 6,
-    question:
-      "아기다리 고기다리던 축제 날! 내가 좋아하는 가수가 온다는 소식을 들었다. 하지만 내일이 전공 쪽지시험...",
+    question: "아기다리 고기다리던 축제 날! 내가 좋아하는 가수가 온다는 소식을 들었다. 하지만 내일이 전공 쪽지시험...",
     answers: [
       {
         id: "6-1",
-        answer:
-          "에라 모르겠다 쪽지시험 한번 쯤이야. 살면서 좋아하는 가수 언제 또 보노? ",
+        answer: "에라 모르겠다 쪽지시험 한번 쯤이야. 살면서 좋아하는 가수 언제 또 보노? ",
         label: "relationship",
       },
       {
@@ -101,8 +97,7 @@ export const data = [
   },
   {
     id: 7,
-    question:
-      "오늘부터 시험 공부하기로 마음 먹었는데 학과 친구들이 술을 먹자고 한다...",
+    question: "오늘부터 시험 공부하기로 마음 먹었는데 학과 친구들이 술을 먹자고 한다...",
     answers: [
       {
         id: "7-1",
@@ -154,42 +149,42 @@ export const types = {
   SJL: {
     id: "coffebreak",
     name: "커피브레이크",
-    desc: "",
+    desc: "커피브레이크는 영어로 coffebreak..",
   },
   SJM: {
     id: "loyola",
     name: "로욜라",
-    desc: "",
+    desc: "로욜라는 영어로 loyola...",
   },
   SIL: {
     id: "xlab",
     name: "X관랩실",
-    desc: "",
+    desc: "x관랩실이 대체 뭔데",
   },
   SIM: {
     id: "job",
     name: "취업지원팀",
-    desc: "",
+    desc: "최성욱 과장님 화이팅..",
   },
   RJL: {
     id: "alba",
     name: "알바트로스탑",
-    desc: "",
+    desc: "알바하는 트로스탑",
   },
   RJM: {
     id: "forest",
     name: "경의선숲길",
-    desc: "",
+    desc: "동상 보러가자",
   },
   RIL: {
     id: "sinchon",
     name: "빨간잠망경",
-    desc: "",
+    desc: "왜 잠망경은 빨갛니",
   },
   RIM: {
     id: "soju",
     name: "서강포차",
-    desc: "",
+    desc: "달려보즈아~",
   },
 };
 
