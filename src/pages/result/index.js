@@ -65,7 +65,6 @@ const Result = () => {
       <Text bigText={true}>당신의 서강 유형은!</Text>
       {type ? (
         <>
-          {" "}
           <Text typeText={true}>{type.name}형</Text>
           <WhiteBox>
             <CharacterImg src="likelion.png" width="80%" />
@@ -92,12 +91,7 @@ const Result = () => {
           </WhiteBox>
           <Button text="다시하기" onClick={retry} />
           <Button text="결과 공유하기" onClick={share} />
-          <Button
-            text="테스트가 재밌으셨나요?"
-            onClick={likelion}
-            bgColor={COLOR_MAIN_RED}
-            color={COLOR_WHITE_TEXT}
-          />
+          <Button text="테스트가 재밌으셨나요?" onClick={likelion} bgColor={COLOR_MAIN_RED} color={COLOR_WHITE_TEXT} />
         </>
       ) : (
         ""
