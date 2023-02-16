@@ -16,6 +16,7 @@ export default function Home() {
   return (
     <Flex>
       <Head>
+        <link rel="icon" href="https://sogangtype.com/likelion-logo.png" />
         <title>당신의 서강 유형은?</title>
         <meta property="og:title" content="당신의 서강 유형은?" key="title" />
         <meta property="og:url" content="https://sogangtype.com" />
