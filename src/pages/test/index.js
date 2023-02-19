@@ -75,10 +75,11 @@ const Test = () => {
 
     localStorage.setItem("sgType", type);
 
-    const type_name = types[type].name;
+    // const type_name = types[type].name;
+    const sg_type = type;
     const major = localStorage.getItem("major");
 
-    const userId = await postResult(type_name, major);
+    const userId = await postResult(sg_type, major);
 
     localStorage.setItem("userId", userId);
     router.push("/result");

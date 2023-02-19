@@ -53,6 +53,10 @@ const Result = () => {
     router.push("/likelion");
   };
 
+  const rank = () => {
+    router.push("/rank");
+  };
+
   const key = process.env.NEXT_PUBLIC_KAKAO_API_KEY;
 
   const getResult = async (userId) => {
@@ -127,8 +131,15 @@ const Result = () => {
           <WhiteBox width="80%">
             <Stats stats={stats} type={type.name} major={major} />
           </WhiteBox>
+
+          <Button text="유형 순위보기" onClick={rank} />
           <Button text="다시하기" onClick={retry} />
-          <Button text="결과 공유하기" onClick={share} />
+          <Button
+            text="결과 공유하기"
+            onClick={share}
+            bgColor={COLOR_MAIN_RED}
+            color={COLOR_WHITE_TEXT}
+          />
           <Button
             text="테스트가 재밌으셨나요?"
             onClick={likelion}
