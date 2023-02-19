@@ -8,6 +8,9 @@ import { data } from "~/@utils/data.js";
 import { useRouter } from "next/router";
 import { CharacterImg } from "~/@components/atoms/CharacterImg";
 import { COLOR_MAIN_RED, COLOR_WHITE_TEXT } from "~/@utils/color";
+import axios from "axios";
+import { types } from "~/@utils/data.js";
+import { APIURL } from "~/config";
 
 const Test = () => {
   const [curIdx, setCurIdx] = useState(0);
@@ -32,7 +35,24 @@ const Test = () => {
     setStateWidth(`${width}%`);
   };
 
-  const showResult = () => {
+  const postResult = async (sg_type, major) => {
+    console.log("sg_type: ", sg_type, major);
+    const ret = await axios.post(`${APIURL}/api/user/`, {
+      major,
+      sg_type: sg_type,
+    });
+
+    console.log(ret);
+
+    let userId = null;
+    if (ret.status === 201) {
+      userId = ret.data.id;
+    }
+
+    return userId;
+  };
+
+  const showResult = async () => {
     let type = "";
 
     if (curType.study >= 2) {
@@ -55,6 +75,12 @@ const Test = () => {
 
     localStorage.setItem("sgType", type);
 
+    const type_name = types[type].name;
+    const major = localStorage.getItem("major");
+
+    const userId = await postResult(type_name, major);
+
+    localStorage.setItem("userId", userId);
     router.push("/result");
   };
 

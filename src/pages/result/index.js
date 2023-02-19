@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { types } from "~/@utils/data";
 import { Flex } from "~/@components/atoms/Flex";
 import { Text } from "~/@components/atoms/Text";
@@ -54,22 +54,9 @@ const Result = () => {
 
   const key = process.env.NEXT_PUBLIC_KAKAO_API_KEY;
 
-  const postResult = async (sg_type) => {
-    const ret = await axios.post(`${APIURL}/api/user/`, {
-      major,
-      sg_type: sg_type,
-    });
-
-    let userId = null;
-    if (ret.status === 201) {
-      userId = ret.data.id;
-    }
-
-    return userId;
-  };
   const getResult = async (userId) => {
     const ret = await axios.get(`${APIURL}/api/stats/${userId}/`);
-    console.log(ret);
+    // console.log(ret);
     let stats = null;
     if (ret.status === 200) {
       stats = ret.data;
@@ -78,7 +65,7 @@ const Result = () => {
     return stats;
   };
 
-  const sendRequest = async () => {
+  const sendRequest = useCallback(async () => {
     const result = localStorage.getItem("sgType");
     const resultMajor = localStorage.getItem("major");
 
@@ -98,12 +85,7 @@ const Result = () => {
       window.Kakao.init(key);
     }
 
-    const userId = await postResult(types[result].name);
-
-    if (!userId) {
-      console.log("postResult failed!");
-      return;
-    }
+    const userId = localStorage.getItem("userId");
 
     const stats = await getResult(userId);
 
@@ -112,10 +94,8 @@ const Result = () => {
       return;
     }
 
-    console.log(stats);
-
     setStats(stats);
-  };
+  }, []);
 
   useEffect(() => {
     sendRequest();
@@ -156,7 +136,12 @@ const Result = () => {
           </WhiteBox>
           <Button text="다시하기" onClick={retry} />
           <Button text="결과 공유하기" onClick={share} />
-          <Button text="테스트가 재밌으셨나요?" onClick={likelion} bgColor={COLOR_MAIN_RED} color={COLOR_WHITE_TEXT} />
+          <Button
+            text="테스트가 재밌으셨나요?"
+            onClick={likelion}
+            bgColor={COLOR_MAIN_RED}
+            color={COLOR_WHITE_TEXT}
+          />
         </>
       ) : (
         ""
