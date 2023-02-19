@@ -29,8 +29,9 @@ export default function ChooseMajor() {
 
   return (
     <Flex>
-      <Text bigText={true}>
-        축하합니다 서강대학교에 입학하셨습니다!
+      <Text qText={true}>
+        축하합니다!
+        <br /> 서강대학교에 입학하셨습니다.
         <br />
         학과를 선택해주세요.
       </Text>
@@ -101,10 +102,10 @@ const DropDown = styled.div`
 
 const DropDownItem = styled.div`
   width: 100%;
-  padding: 5px 15px;
-  height: 20%;
+  padding: 10px 20px;
   background-color: ${COLOR_MAIN_YELLOW};
   transition: 0.3s;
+  font-size: 0.8rem;
 
   &:hover {
     background-color: rgba(191, 60, 67, 0.5);

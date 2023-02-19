@@ -104,7 +104,7 @@ const Test = () => {
       ) : (
         <>
           {/* 질문 */}
-          <Text bigText={true}>Q. {data[curIdx].question}</Text>
+          <Text qText={true}>Q. {data[curIdx].question}</Text>
           {/* 상태 바 */}
           <StateBar stateWidth={stateWidth} />
           {/* 답변 - 1 */}

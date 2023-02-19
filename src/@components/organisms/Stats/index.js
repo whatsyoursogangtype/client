@@ -6,9 +6,9 @@ export function Stats({ children, stats, type, major }) {
   return (
     <StatsBox>
       <StatsBigText>내 유형 통계</StatsBigText>
-      <StatsBigText style={{ fontSize: "17px" }}>
+      <StatsBigText style={{ fontSize: "0.8rem", lineHeight: "1.3rem" }}>
         {type}형은 <span style={{ color: COLOR_MAIN_RED }}>{stats.stat2}</span>
-        가 가장 높은 비율을 차지합니다!
+        가<br /> 가장 높은 비율을 차지합니다!
       </StatsBigText>
 
       <StatsDiv>
@@ -19,7 +19,10 @@ export function Stats({ children, stats, type, major }) {
             </StatsBar>
           </StatsBarBase>
 
-          <StatsBarText>전체 응시자 중 {type}형 비율</StatsBarText>
+          <StatsBarText>
+            전체 응시자 중 <br />
+            {type}형 비율
+          </StatsBarText>
         </StatsBarDiv>
         <StatsBarDiv>
           <StatsBarBase>
@@ -29,7 +32,8 @@ export function Stats({ children, stats, type, major }) {
           </StatsBarBase>
 
           <StatsBarText>
-            {major} 응시자 중 {type}형 비율
+            <p>{major} 응시자 중 </p>
+            <p>{type}형 비율</p>
           </StatsBarText>
         </StatsBarDiv>
       </StatsDiv>
@@ -40,9 +44,10 @@ export function Stats({ children, stats, type, major }) {
 const StatsBox = styled.div``;
 
 const StatsBigText = styled.div`
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 10px;
 `;
 
 const StatsDiv = styled.div`
@@ -77,14 +82,15 @@ const StatsBar = styled.div`
 `;
 const StatsNum = styled.div`
   position: absolute;
-  top: -18px;
-  font-size: 14px;
+  top: -1.2rem;
+  font-size: 0.6rem;
   width: 100%;
-  line-height: 18px;
+  line-height: 1.2rem;
   text-align: center;
 `;
 const StatsBarText = styled.div`
-  font-size: 14px;
-  line-height: 26px;
-  //   background-color: aqua;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  text-align: center;
+  margin-top: 8px;
 `;

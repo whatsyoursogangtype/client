@@ -19,7 +19,7 @@ export function StateBar({ children, id = "none", stateWidth }) {
 
 const StyledDiv = styled.div`
   width: 80%;
-  margin-bottom: 50px;
+  margin-bottom: 120px;
 `;
 const StyledStateBar = styled.div`
   height: 12px;

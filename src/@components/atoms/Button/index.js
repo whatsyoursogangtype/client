@@ -9,11 +9,12 @@ import { Text } from "../Text";
 
 export const Button = ({
   text = "hi",
-  padding = "3px 10px",
+  padding = "7px 15px",
   radius = "10px",
   bgColor = COLOR_MAIN_YELLOW,
-  font = "onLeaf",
-  size = 1,
+  // font = "onLeaf",
+  font = "CookieRun",
+  size = 0.8,
   border = `2px solid ${COLOR_MAIN_RED}`,
   cursor = "pointer",
   color = COLOR_MAIN_TEXT,
@@ -57,7 +58,11 @@ const RoundedItemContainer = styled.div`
   border-radius: ${({ radius }) => radius};
   background-color: ${({ bgColor }) => bgColor};
   border: ${({ border }) => border};
-  width: 70%;
+  width: 80%;
   margin-bottom: 10px;
   position: relative;
+
+  display: flex;
+  // justify-content: center;
+  align-items: center;
 `;

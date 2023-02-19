@@ -13,6 +13,8 @@ export const commonStyle = css`
   }
 
   body * {
-    font-family: onLeaf;
+    // font-family: onLeaf;
+    // font-family: GmarketSansTTFMedium;
+    font-family: CookieRun;
   }
 `;
