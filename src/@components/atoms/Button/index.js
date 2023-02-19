@@ -59,7 +59,7 @@ const RoundedItemContainer = styled.div`
   background-color: ${({ bgColor }) => bgColor};
   border: ${({ border }) => border};
   width: 80%;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   position: relative;
 
   display: flex;

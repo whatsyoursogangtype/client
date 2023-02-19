@@ -11,7 +11,7 @@ export function Text({
   font = "CookieRun",
   cursor = "auto",
   underline = false,
-  lineHeight = "120%",
+  lineHeight = "200%",
   id = "none",
   bigText = false,
   typeText = false,
@@ -42,7 +42,7 @@ const StyledText = styled.span`
   font-weight: ${({ weight }) => weight};
   color: ${({ color }) => color};
   // letter-spacing: ${({ spacing }) => spacing}px;
-  // line-height: ${({ lineHeight }) => lineHeight};
+  line-height: ${({ lineHeight }) => lineHeight};
   font-family: ${({ font }) => font};
   cursor: ${({ cursor }) => cursor};
 
