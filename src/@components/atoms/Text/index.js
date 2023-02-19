@@ -73,7 +73,7 @@ const StyledText = styled.span`
         font-size: 1.3rem;
         width: 90%;
         text-align: center;
-        margin: 100px 0 35px;
+        margin: 70px 0 35px;
         font-weight: bold;
         line-height: 2rem;
       `;

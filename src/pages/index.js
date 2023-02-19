@@ -43,7 +43,7 @@ export default function Home() {
         color={COLOR_WHITE_TEXT}
       />
 
-      <CharacterImg src="likelion-logo.png" width="15%" margin="100px 0 0" />
+      {/* <CharacterImg src="likelion-logo.png" width="15%" margin="100px 0 0" /> */}
     </Flex>
   );
 }
