@@ -20,6 +20,7 @@ const Result = () => {
   const [stats, setStats] = useState({});
 
   const retry = () => {
+    let a = 1;
     localStorage.removeItem("major");
     localStorage.removeItem("sgType");
     router.push("/");
@@ -121,11 +122,9 @@ const Result = () => {
             <Text>
               커브가 곧 나의 집! 당신은 혹시 커브 지박령…?!??
               <br />
-              <br /> 과제, 팀플, 성적 뭐 하나도 놓칠 수 없다. 좋은 성적을 위해선
-              팀장도 꺼리지 않는 당신! 명확한 목표에 계획을 정해두고
-              차근차근하는 스타일이군요. 혹시 팀플에서 팀장을 많이 맡고 계시진
-              않나요? 등교 전, 공강 시간, 하교 후 어느 때나 커브에 오면 나를 볼
-              수 있어요~
+              <br /> 과제, 팀플, 성적 뭐 하나도 놓칠 수 없다. 좋은 성적을 위해선 팀장도 꺼리지 않는 당신! 명확한 목표에
+              계획을 정해두고 차근차근하는 스타일이군요. 혹시 팀플에서 팀장을 많이 맡고 계시진 않나요? 등교 전, 공강
+              시간, 하교 후 어느 때나 커브에 오면 나를 볼 수 있어요~
             </Text>
           </WhiteBox>
           <WhiteBox width="80%">
@@ -134,18 +133,8 @@ const Result = () => {
 
           <Button text="유형 순위보기" onClick={rank} />
           <Button text="다시하기" onClick={retry} />
-          <Button
-            text="결과 공유하기"
-            onClick={share}
-            bgColor={COLOR_MAIN_RED}
-            color={COLOR_WHITE_TEXT}
-          />
-          <Button
-            text="테스트가 재밌으셨나요?"
-            onClick={likelion}
-            bgColor={COLOR_MAIN_RED}
-            color={COLOR_WHITE_TEXT}
-          />
+          <Button text="결과 공유하기" onClick={share} bgColor={COLOR_MAIN_RED} color={COLOR_WHITE_TEXT} />
+          <Button text="테스트가 재밌으셨나요?" onClick={likelion} bgColor={COLOR_MAIN_RED} color={COLOR_WHITE_TEXT} />
         </>
       ) : (
         ""
