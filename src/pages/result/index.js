@@ -122,8 +122,8 @@ const Result = () => {
           <WhiteBox width="80%">
             <CharacterImg src="likelion.png" width="60%" margin="0 0 30px" />
             {type.desc.map((el, idx) => (
-              <div>
-                <Text key={idx}>{el}</Text>
+              <div key={idx}>
+                <Text>{el}</Text>
                 <br />
               </div>
             ))}
