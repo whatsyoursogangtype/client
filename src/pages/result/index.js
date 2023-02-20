@@ -121,13 +121,12 @@ const Result = () => {
           </WhiteBox> */}
           <WhiteBox width="80%">
             <CharacterImg src="likelion.png" width="60%" margin="0 0 30px" />
-            <Text>
-              커브가 곧 나의 집! 당신은 혹시 커브 지박령…?!??
-              <br />
-              <br /> 과제, 팀플, 성적 뭐 하나도 놓칠 수 없다. 좋은 성적을 위해선 팀장도 꺼리지 않는 당신! 명확한 목표에
-              계획을 정해두고 차근차근하는 스타일이군요. 혹시 팀플에서 팀장을 많이 맡고 계시진 않나요? 등교 전, 공강
-              시간, 하교 후 어느 때나 커브에 오면 나를 볼 수 있어요~
-            </Text>
+            {type.desc.map((el, idx) => (
+              <div>
+                <Text key={idx}>{el}</Text>
+                <br />
+              </div>
+            ))}
           </WhiteBox>
           <WhiteBox width="80%">
             <Stats stats={stats} type={type.name} major={major} />
