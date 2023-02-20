@@ -1,10 +1,5 @@
 import styled from "styled-components";
-import {
-  COLOR_MAIN_RED,
-  COLOR_MAIN_TEXT,
-  COLOR_MAIN_YELLOW,
-  COLOR_WHITE_TEXT,
-} from "~/@utils/color";
+import { COLOR_MAIN_RED, COLOR_MAIN_TEXT, COLOR_MAIN_YELLOW, COLOR_WHITE_TEXT } from "~/@utils/color";
 import { Text } from "../Text";
 
 export const Button = ({
@@ -36,14 +31,7 @@ export const Button = ({
       onClick={onClick}
       id={id}
     >
-      <Text
-        font={font}
-        color={color}
-        size={size}
-        cursor={"pointer"}
-        spacing={spacing}
-        id={id}
-      >
+      <Text font={font} color={color} size={size} cursor={"pointer"} spacing={spacing} id={id}>
         {text}
       </Text>
 
