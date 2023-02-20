@@ -96,7 +96,9 @@ const Test = () => {
       ) : (
         <>
           {/* 질문 */}
-          <Text qText={true}>Q. {data[curIdx].question}</Text>
+          <div style={{ height: "300px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <Text qText={true}>Q. {data[curIdx].question}</Text>
+          </div>
           {/* 상태 바 */}
           <StateBar stateWidth={stateWidth} />
           {/* 답변 - 1 */}

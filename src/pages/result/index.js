@@ -123,7 +123,8 @@ const Result = () => {
             <CharacterImg src="likelion.png" width="60%" margin="0 0 30px" />
             {type.desc.map((el, idx) => (
               <div key={idx}>
-                <Text>{el}</Text>
+                <Text weight={idx === 0 ? "bold" : "normal"}>{el}</Text>
+                <br />
                 <br />
               </div>
             ))}
