@@ -169,7 +169,7 @@ export const types = {
   RJL: {
     id: "alba",
     name: "알바트로스탑",
-    desc: "알바하는 트로스탑",
+    desc: "그대 서강의 자랑이듯 서강 그대의 자랑이어라…",
   },
   RJM: {
     id: "forest",
