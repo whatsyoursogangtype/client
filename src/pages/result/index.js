@@ -87,8 +87,10 @@ const Result = () => {
       router.push("/");
     }
 
-    if (!window.Kakao.isInitialized()) {
-      window.Kakao.init(key);
+    if (window.Kakao) {
+      if (!window.Kakao.isInitialized()) {
+        window.Kakao.init(key);
+      }
     }
 
     const userId = localStorage.getItem("userId");

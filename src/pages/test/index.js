@@ -42,8 +42,6 @@ const Test = () => {
       sg_type: sg_type,
     });
 
-    console.log(ret);
-
     let userId = null;
     if (ret.status === 201) {
       userId = ret.data.id;
@@ -85,8 +83,6 @@ const Test = () => {
     router.push("/result");
   };
 
-  console.log(curType);
-
   return (
     <Flex>
       {curIdx >= data.length ? (
@@ -95,12 +91,7 @@ const Test = () => {
         // </Link>
         <>
           <CharacterImg src="likelion.png" width="50%" margin="100px 0 50px" />
-          <Button
-            onClick={showResult}
-            text={"결과보기"}
-            bgColor={COLOR_MAIN_RED}
-            color={COLOR_WHITE_TEXT}
-          />
+          <Button onClick={showResult} text={"결과보기"} bgColor={COLOR_MAIN_RED} color={COLOR_WHITE_TEXT} />
         </>
       ) : (
         <>
@@ -109,17 +100,9 @@ const Test = () => {
           {/* 상태 바 */}
           <StateBar stateWidth={stateWidth} />
           {/* 답변 - 1 */}
-          <Button
-            text={data[curIdx].answers[0].answer}
-            id={data[curIdx].answers[0].label}
-            onClick={onClick}
-          />
+          <Button text={data[curIdx].answers[0].answer} id={data[curIdx].answers[0].label} onClick={onClick} />
           {/* 답변 - 2 */}
-          <Button
-            text={data[curIdx].answers[1].answer}
-            id={data[curIdx].answers[1].label}
-            onClick={onClick}
-          />
+          <Button text={data[curIdx].answers[1].answer} id={data[curIdx].answers[1].label} onClick={onClick} />
         </>
       )}
     </Flex>

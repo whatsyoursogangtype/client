@@ -17,7 +17,6 @@ const RankPage = () => {
   const sendRequest = async () => {
     const ret = await axios.get(`${APIURL}/api/stats/rank/`);
 
-    console.log(ret);
     const data = ret.data;
 
     let num = 1;
@@ -32,7 +31,6 @@ const RankPage = () => {
       temp.push(rank);
     }
 
-    console.log(temp);
     setRanks(temp);
   };
 

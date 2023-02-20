@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { Button } from "~/@components/atoms/Button";
 import { CharacterImg } from "~/@components/atoms/CharacterImg";
@@ -34,11 +35,9 @@ const Likelion = () => {
           <br />
         </Text>
       </WhiteBox>
-      <Button
-        text="지원사이트 바로가기"
-        color={COLOR_WHITE_TEXT}
-        bgColor={COLOR_MAIN_RED}
-      />
+      <Link href={"www.applion11th.com"}>
+        <Button text="지원사이트 바로가기" color={COLOR_WHITE_TEXT} bgColor={COLOR_MAIN_RED} />
+      </Link>
     </Flex>
   );
 };
