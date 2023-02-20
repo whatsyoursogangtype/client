@@ -9,7 +9,7 @@ import axios from "axios";
 import { APIURL } from "~/config";
 import Rank from "~/@components/organisms/Rank";
 
-const index = () => {
+const RankPage = () => {
   const router = useRouter();
 
   const [ranks, setRanks] = useState([]);
@@ -44,11 +44,9 @@ const index = () => {
     <Flex>
       <Text typeText={true}>유형 순위</Text>
 
-      {ranks.map((rank) => (
-        <Rank key={rank.num} num={rank.num} type={rank.type} stat={rank.stat} />
-      ))}
+      {ranks ? ranks.map((rank) => <Rank key={rank.num} num={rank.num} type={rank.type} stat={rank.stat} />) : ""}
     </Flex>
   );
 };
 
-export default index;
+export default RankPage;
