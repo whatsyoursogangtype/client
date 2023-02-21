@@ -31,7 +31,7 @@ const Result = () => {
       objectType: "feed",
       content: {
         title: type.name,
-        description: type.desc,
+        description: type.desc[0],
         imageUrl: "https://sogangtype.com/likelion.png",
         link: {
           mobileWebUrl: "https://sogangtype.com",
