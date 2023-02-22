@@ -14,12 +14,12 @@ const Rank = ({ num, type, stat }) => {
 
       <div style={{ flex: 2 }}>
         <TypeName>{types[type].name} 형</TypeName>
-        <TypeDesc>커브가 곧 나의 집! 당신은 혹시 커브 지박령…?!??</TypeDesc>
+        <TypeDesc>{types[type].desc[0]}</TypeDesc>
       </div>
 
       <StatDiv>
         <Stat>전체 중 {stat}%</Stat>
-        <CharacterImg src="likelion.png" width="60%" />
+        <CharacterImg src={types[type].image} width="60%" />
       </StatDiv>
     </RankDiv>
   );

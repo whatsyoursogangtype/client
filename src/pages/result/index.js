@@ -116,11 +116,8 @@ const Result = () => {
       {type ? (
         <>
           <Text typeText={true}>{type.name}형</Text>
-          {/* <WhiteBox>
-            <CharacterImg src="likelion.png" width="80%" />
-          </WhiteBox> */}
           <WhiteBox width="80%">
-            <CharacterImg src="likelion.png" width="60%" margin="0 0 30px" />
+            <CharacterImg src={type.image} width="60%" margin="0 0 30px" />
             {type.desc.map((el, idx) => (
               <div key={idx}>
                 <Text weight={idx === 0 ? "bold" : "normal"}>{el}</Text>
@@ -135,8 +132,18 @@ const Result = () => {
 
           <Button text="유형 순위보기" onClick={rank} />
           <Button text="다시하기" onClick={retry} />
-          <Button text="결과 공유하기" onClick={share} bgColor={COLOR_MAIN_RED} color={COLOR_WHITE_TEXT} />
-          <Button text="테스트가 재밌으셨나요?" onClick={likelion} bgColor={COLOR_MAIN_RED} color={COLOR_WHITE_TEXT} />
+          <Button
+            text="결과 공유하기"
+            onClick={share}
+            bgColor={COLOR_MAIN_RED}
+            color={COLOR_WHITE_TEXT}
+          />
+          <Button
+            text="테스트가 재밌으셨나요?"
+            onClick={likelion}
+            bgColor={COLOR_MAIN_RED}
+            color={COLOR_WHITE_TEXT}
+          />
         </>
       ) : (
         ""
