@@ -7,7 +7,6 @@ export function Text({
   color = COLOR_MAIN_TEXT,
   children,
   spacing = -0.6,
-  // font = "onLeaf",
   font = "CookieRun",
   cursor = "auto",
   underline = false,
