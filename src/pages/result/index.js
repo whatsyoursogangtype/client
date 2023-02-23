@@ -32,7 +32,7 @@ const Result = () => {
       content: {
         title: type.name,
         description: type.desc[0],
-        imageUrl: "https://sogangtype.com/likelion.png",
+        imageUrl: `https://sogangtype.com/${type.image}`,
         link: {
           mobileWebUrl: "https://sogangtype.com",
           webUrl: "https://sogangtype.com",
@@ -132,18 +132,8 @@ const Result = () => {
 
           <Button text="유형 순위보기" onClick={rank} />
           <Button text="다시하기" onClick={retry} />
-          <Button
-            text="결과 공유하기"
-            onClick={share}
-            bgColor={COLOR_MAIN_RED}
-            color={COLOR_WHITE_TEXT}
-          />
-          <Button
-            text="테스트가 재밌으셨나요?"
-            onClick={likelion}
-            bgColor={COLOR_MAIN_RED}
-            color={COLOR_WHITE_TEXT}
-          />
+          <Button text="결과 공유하기" onClick={share} bgColor={COLOR_MAIN_RED} color={COLOR_WHITE_TEXT} />
+          <Button text="테스트가 재밌으셨나요?" onClick={likelion} bgColor={COLOR_MAIN_RED} color={COLOR_WHITE_TEXT} />
         </>
       ) : (
         ""

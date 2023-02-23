@@ -5,7 +5,7 @@ import { COLOR_MAIN_RED, COLOR_MAIN_TEXT } from "~/@utils/color";
 export function StateBar({ children, id = "none", stateWidth }) {
   return (
     <StyledDiv>
-      <CharacterImg src="likelion.png" location={stateWidth} />
+      <CharacterImg src="question.gif" location={stateWidth} />
       <StyledStateBar>
         <StyledState stateWidth={stateWidth} />
       </StyledStateBar>
