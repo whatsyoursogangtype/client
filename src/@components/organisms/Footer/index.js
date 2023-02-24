@@ -5,9 +5,7 @@ import { COLOR_MAIN_TEXT } from "~/@utils/color";
 export function Footer({ children, id = "none" }) {
   return (
     <StyledFooter>
-      <StyledText>
-        Copyright ⓒ 2023 멋쟁이사자처럼 서강. All right Reserved.
-      </StyledText>
+      <StyledText>Copyright ⓒ 2023 멋쟁이사자처럼 서강. All right Reserved.</StyledText>
     </StyledFooter>
   );
 }

@@ -42,7 +42,7 @@ export default function Home() {
         What&apos;s your sogang type?
       </MainText>
 
-      <CharacterImg src="all.png" width="70%" margin="20px 0px" />
+      <CharacterImg src="all.png" width="65%" margin="20px 0px" />
 
       <div style={{ marginBottom: "30px" }} />
       <Button text="테스트 시작하기" onClick={onClick} />
@@ -50,6 +50,7 @@ export default function Home() {
       {isPopup ? <ToastBar /> : ""}
 
       {/* <CharacterImg src="likelion-logo.png" width="15%" margin="100px 0 0" /> */}
+      <Text>배경사진 협찬 : 서강대 이기진 교수님</Text>
     </Flex>
   );
 }

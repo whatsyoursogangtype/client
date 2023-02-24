@@ -36,7 +36,6 @@ const Test = () => {
   };
 
   const postResult = async (sg_type, major) => {
-    console.log("sg_type: ", sg_type, major);
     const ret = await axios.post(`${APIURL}/api/user/`, {
       major,
       sg_type: sg_type,
