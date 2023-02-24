@@ -19,7 +19,7 @@ const Likelion = () => {
     <Flex>
       <Text bigText={true}>당신은....</Text>
       <Text typeText={true}>멋쟁이사자처럼형!</Text>
-      <WhiteBox>
+      <WhiteBox width={"80%"}>
         <CharacterImg src="lion.png" width="80%" />
         <div>
           <Text weight="bold">POSSIBILITY TO REALITY</Text>
