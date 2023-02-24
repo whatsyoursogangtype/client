@@ -30,7 +30,7 @@ const Result = () => {
     Kakao.Share.sendDefault({
       objectType: "feed",
       content: {
-        title: type.name,
+        title: `당신은 ${type.name}형!`,
         description: type.desc[0],
         imageUrl: `https://sogangtype.com/${type.image}`,
         link: {
