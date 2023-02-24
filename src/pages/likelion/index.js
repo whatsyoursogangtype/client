@@ -21,8 +21,6 @@ const Likelion = () => {
       <Text typeText={true}>멋쟁이사자처럼형!</Text>
       <WhiteBox>
         <CharacterImg src="lion.png" width="80%" />
-      </WhiteBox>
-      <WhiteBox width="80%">
         <div>
           <Text weight="bold">POSSIBILITY TO REALITY</Text>
           <br />

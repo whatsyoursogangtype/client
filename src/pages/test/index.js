@@ -90,7 +90,7 @@ const Test = () => {
         //   <Button onClick={showResult} text={"결과보기"} />
         // </Link>
         <>
-          <CharacterImg src="likelion.png" width="50%" margin="100px 0 50px" />
+          <CharacterImg src="all.png" width="50%" margin="100px 0 50px" />
           <Button onClick={showResult} text={"결과보기"} bgColor={COLOR_MAIN_RED} color={COLOR_WHITE_TEXT} />
         </>
       ) : (

@@ -41,7 +41,7 @@ export default function Home() {
         What&apos;s your sogang type?
       </Text>
 
-      <CharacterImg src="likelion.png" width="40%" margin="20px 0 50px" />
+      <CharacterImg src="all.png" width="40%" margin="20px 0 50px" />
 
       <div style={{ marginBottom: "30px" }} />
       <Button text="테스트 시작하기" onClick={onClick} />
