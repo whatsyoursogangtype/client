@@ -7,6 +7,7 @@ import { CharacterImg } from "~/@components/atoms/CharacterImg";
 import Head from "next/head";
 import ToastBar from "~/@components/organisms/ToastBar";
 import { useState } from "react";
+import styled from "styled-components";
 
 export default function Home() {
   const router = useRouter();
@@ -35,13 +36,13 @@ export default function Home() {
         <meta property="og:description" content="What's your sogang type?" />
         <meta property="og:site_name" content="whatsyoursogangtype" />
       </Head>
-      <Text bigText={true}>
+      <MainText>
         당신의 서강생활 유형은?
         <br />
         What&apos;s your sogang type?
-      </Text>
+      </MainText>
 
-      <CharacterImg src="all.png" width="80%" margin="20px 0 50px" />
+      <CharacterImg src="all.png" width="80%" margin="20px 0px" />
 
       <div style={{ marginBottom: "30px" }} />
       <Button text="테스트 시작하기" onClick={onClick} />
@@ -52,3 +53,12 @@ export default function Home() {
     </Flex>
   );
 }
+
+const MainText = styled.span`
+  font-size: 1.3rem;
+  width: 70%;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
+  line-height: 2rem;
+`;
